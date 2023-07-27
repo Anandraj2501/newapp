@@ -13,7 +13,7 @@ export default function Navbar() {
     let [open, setOpen] = useState(false);
     const handleopenclick = ()=>{
         if(open === false){
-            setOpen(true);
+            setOpen(true); 
         }
         else{
             setOpen(false);
@@ -26,33 +26,7 @@ export default function Navbar() {
                 <div className="container-fluid ">
                     <a className="navbar-brand  text-light fw-semibold" href="/">Famazon</a>
 
-                    {/* <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        
-                        <span className="navbar-toggler-icon "></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse " id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active" >
-                                <a className="nav-link text-light" href="/">Home</a>
-                            </li>
-                            <li className="nav-item" >
-                                <a className="nav-link text-light" href="/">Tablets & Phones</a>
-                            </li>
-                            <li className="nav-item" >
-                                <a className="nav-link text-light" href="/">Television</a>
-                            </li>
-                            <li className="nav-item" >
-                                <a className="nav-link text-light" href="/">Headphones</a>
-                            </li>
-                            <li className="nav-item" >
-                                <a className="nav-link text-light" href="/">Laptops</a>
-                            </li>
-
-
-                        </ul>
-                        
-                    </div> */}
+                    
                     <div className="searchbox search-box ">
                         <input className="form-control mr-sm-2 me-1 col-sm-8 rounded" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-primary font-weight-bold my-2 my-sm-0" type="submit">Search</button>
