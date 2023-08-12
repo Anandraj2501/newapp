@@ -37,7 +37,7 @@ export default function Main() {
         { rheartcolor: true },
         { rheartcolor: true }]
     });
-    
+
 
     return (
         <>
@@ -47,7 +47,7 @@ export default function Main() {
                 <div className="mainwrapper">
                     <div className="brand-names-container">
 
-                        {/* <Link className="brand-names" to="/Samsung">SAMSUNG</Link> */}
+                        <Link className="brand-names" to="/">SAMSUNG</Link>
                         <Link className="brand-names" to="/Iphone">IPhones</Link>
                         <Link className="brand-names" to="/Asus">ASUS</Link>
                         <Link className="brand-names" to="/Redmi">Redmi</Link>
@@ -55,14 +55,14 @@ export default function Main() {
                     </div>
                     <Outlet />
                     <hr />
-                    <ColorContext.Provider value={{appstate, setAppstate}}>
+                    <ColorContext.Provider value={{ appstate, setAppstate }}>
                         <Routes>
                             <Route path='/' exact element={<SAMSUNG />} />
-                            <Route path='/iphone' exact element={<Iphone />}>
+                            <Route path='/Iphone' exact element={<Iphone />}>
                             </Route>
-                            <Route path='/asus' exact element={<Asus />}>
+                            <Route path='/Asus' exact element={<Asus />}>
                             </Route>
-                            <Route path='/redmi' exact element={<Redmi />}>
+                            <Route path='/Redmi' exact element={<Redmi />}>
                             </Route>
                         </Routes>
                     </ColorContext.Provider>

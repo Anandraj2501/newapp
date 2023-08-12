@@ -2,7 +2,7 @@ import React from 'react';
 import './Css/navbar.css';
 import { useState } from 'react';
 import { useContext } from 'react';
-
+import Cart from './Cart';
 import {
     BrowserRouter as Router,
     Switch,
@@ -37,7 +37,7 @@ export default function Navbar() {
                         <button className="btn btn-outline-primary font-weight-bold my-2 my-sm-0" type="submit">Search</button>
                     </div>
                     <div className='icons'>
-                        <span className="p-1 me-3"><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff" }}><sup>0</sup></i></span>
+                        <Link className="p-1 me-3" to="/Cart"><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff" }}><sup>0</sup></i></Link>
                         <span className="p-1"><i class="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{count}</sup></i></span>
                         <span className='p-1 hamburger'>
                             <i className="fa-solid fa-bars fa-xl" onClick={handleopenclick} style={{ color: "#ffffff" }}></i></span>
@@ -45,6 +45,7 @@ export default function Navbar() {
                 </div>
 
             </nav>
+            
             <div className="catalogue  shadow-lg" >
                 <div className="catalogue_container d-flex  justify-content-between">
                     <div className="item p-2 mt-2 mb-2">
@@ -144,6 +145,7 @@ export default function Navbar() {
                 <a href="/">Laptops</a>
                 <a href="/">Grocery</a>
             </div>
+
         </div>
     )
 }
