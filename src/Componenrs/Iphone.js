@@ -4,8 +4,8 @@ import { useContext,useState } from 'react';
 import { ColorContext, CountContext } from '../CountContext';
 
 export default function Iphone() {
-    const [count, setCount] = useContext(CountContext);
-    const {appstate,setAppstate} = useContext(ColorContext);
+    const {count, setCount} = useContext(CountContext);
+    const {appstate,setAppstate} = useContext(CountContext);
     
     let values = appstate.object2;
     console.log(values);

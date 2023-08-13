@@ -16,27 +16,6 @@ import {
 
 
 export default function Main() {
-    const [appstate, setAppstate] = useState({
-        object: [{ sheartcolor: true },
-        { sheartcolor: true },
-        { sheartcolor: true },
-        { sheartcolor: true }],
-
-        object2: [{ iheartcolor: true },
-        { iheartcolor: true },
-        { iheartcolor: true },
-        { iheartcolor: true }],
-
-        object3: [{ aheartcolor: true },
-        { aheartcolor: true },
-        { aheartcolor: true },
-        { aheartcolor: true }],
-
-        object4: [{ rheartcolor: true },
-        { rheartcolor: true },
-        { rheartcolor: true },
-        { rheartcolor: true }]
-    });
 
 
     return (
@@ -46,7 +25,7 @@ export default function Main() {
                 <span className="heading">Mobiles</span>
                 <div className="mainwrapper">
                     <div className="brand-names-container">
-
+                    
                         <Link className="brand-names" to="/">SAMSUNG</Link>
                         <Link className="brand-names" to="/Iphone">IPhones</Link>
                         <Link className="brand-names" to="/Asus">ASUS</Link>
@@ -55,7 +34,6 @@ export default function Main() {
                     </div>
                     <Outlet />
                     <hr />
-                    <ColorContext.Provider value={{ appstate, setAppstate }}>
                         <Routes>
                             <Route path='/' exact element={<SAMSUNG />} />
                             <Route path='/Iphone' exact element={<Iphone />}>
@@ -65,7 +43,6 @@ export default function Main() {
                             <Route path='/Redmi' exact element={<Redmi />}>
                             </Route>
                         </Routes>
-                    </ColorContext.Provider>
 
 
 

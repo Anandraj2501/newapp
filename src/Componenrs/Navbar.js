@@ -13,7 +13,8 @@ import {
 import { CountContext } from '../CountContext';
 
 export default function Navbar() {
-    const [count, heartColor] = useContext(CountContext);
+    const {count}= useContext(CountContext);
+    console.log(count);
     let [open, setOpen] = useState(false);
     const handleopenclick = () => {
         if (open === false) {
@@ -38,7 +39,8 @@ export default function Navbar() {
                     </div>
                     <div className='icons'>
                         <Link className="p-1 me-3" to="/Cart"><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff" }}><sup>0</sup></i></Link>
-                        <span className="p-1"><i class="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{count}</sup></i></span>
+                        <span className="p-1"><i class="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{count}</sup></i>
+                        </span>
                         <span className='p-1 hamburger'>
                             <i className="fa-solid fa-bars fa-xl" onClick={handleopenclick} style={{ color: "#ffffff" }}></i></span>
                     </div>

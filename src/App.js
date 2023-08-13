@@ -20,7 +20,7 @@ import Cart from './Componenrs/Cart';
 
 function App() {
   // const [heartcolor,setHeartcolor] = useState(()=> handleclick);
-  const [count, setCount] = useState(0);
+  
 
   //   const handleclick = (e)=>{
   //     if(e.target.className=="fa-regular fa-heart fa-xl"){
@@ -37,7 +37,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <CountContext.Provider value={[count, setCount]}>
         <Navbar/>
         <div className='main'>
           <Routes>
@@ -45,7 +44,6 @@ function App() {
             <Route path='/Cart' exact element={<Cart />}></Route>
           </Routes>
         </div>
-        </CountContext.Provider>
 
       </Router>
     </div>

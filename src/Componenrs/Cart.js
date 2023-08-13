@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Css/cart.css';
+import CartProducts from './CartProducts';
 
 export default function Cart() {
   return (
-    <div>
-      hello cart
+    <div className='cart'>
+        <div className='cart-wrapper'>
+          <CartProducts/>
+        </div>
     </div>
   )
 }

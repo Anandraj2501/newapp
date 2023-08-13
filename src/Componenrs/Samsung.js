@@ -6,10 +6,10 @@ import App from '../App';
 import { CountContext, ColorContext } from '../CountContext';
 
 export default function Samsung() {
-    const [count, setCount] = useContext(CountContext);
+    const {count, setCount} = useContext(CountContext);
 
-    const { appstate, setAppstate } = useContext(ColorContext);
-
+    const { appstate, setAppstate } = useContext(CountContext);
+    console.log(appstate);
     let values = appstate.object;
     console.log(values);
     function handleclick(index) {
