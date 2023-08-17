@@ -38,10 +38,7 @@
     color: rgb(237, 19, 19);
     text-decoration: underline;
 }
-.brand-names:active{
-    color: rgb(237, 19, 19);
-    text-decoration: underline;
-}
+
 .brand-cards-container{
     /* border: 2px solid red; */
     padding: 0vw 2vw;
@@ -102,7 +99,16 @@
 .fa-bag-shopping{
     cursor: pointer;
 }
-
+.remove_btn{
+    border: 1px solid rgb(56 163 251);
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(56, 163, 251);
+}
+.remove_btn:hover{
+    /* background-color: rgb(56, 163, 251); */
+    color: black;
+}
 @media screen and (max-width:660px) {
 
     .brand-img{

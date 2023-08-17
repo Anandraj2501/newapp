@@ -2,21 +2,14 @@
 import './App.css';
 import Navbar from './Componenrs/Navbar';
 import Main from './Componenrs/Main';
-import SAMSUNG from "./Componenrs/Samsung";
-import { createContext, useState } from 'react';
-import { useContext } from 'react';
-import { CountContext } from './CountContext.js';
-import Asus from "./Componenrs/Asus";
-import Iphone from "./Componenrs/Iphone";
-import Redmi from "./Componenrs/Redmi";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Routes,
-  Link
+  
 } from "react-router-dom";
 import Cart from './Componenrs/Cart';
+import Searchpage from './Componenrs/Searchpage';
 
 function App() {
   // const [heartcolor,setHeartcolor] = useState(()=> handleclick);
@@ -42,6 +35,7 @@ function App() {
           <Routes>
             <Route path='*' exact element={<Main/>}></Route>
             <Route path='/Cart' exact element={<Cart />}></Route>
+            <Route path='/Searchpage' exact element={<Searchpage />}></Route>
           </Routes>
         </div>
 

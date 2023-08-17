@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Css/main.css';
 import Iphone from './Iphone';
 import Asus from './Asus';
 import Redmi from './Redmi';
 import SAMSUNG from './Samsung';
-import { ColorContext } from '../CountContext';
 
 import {
-    BrowserRouter as Router,
     Route,
     Routes,
     Link,

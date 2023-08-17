@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Css/main.css';
-import Navbar from './Navbar';
 import { useContext } from 'react';
-import { CountContext,ColorContext } from '../CountContext';
+import { CountContext} from '../CountContext';
 
 
 export default function Iphone() {
     const {count, setCount} = useContext(CountContext);
 
-    const { appstate, setAppstate } = useContext(CountContext);
+    const {
+        state: { cart,appstate },
+        dispatch,
+      } = useContext(CountContext);
 
     let values = appstate.object3;
     console.log(values);
     function handleclick(index) {
         console.log("chlra hai");
-        if (values[index].aheartcolor == true) {
+        if (values[index].aheartcolor === true) {
             values[index].aheartcolor = false;
             console.log("chlra 1hai");
             setCount(count + 1);
@@ -33,14 +35,14 @@ export default function Iphone() {
                 <div className="brand-cards-wrapper">
 
                     {
-                        Object.keys(values).map((index) => (
+                        values.map((prod,index) => (
                             <div key={index} className="card-container">
                                 <span className='brand-container'>
-                                    <img src="https://rukminim2.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70" alt="img" className='brand-img' />
+                                    <img src={prod.src} alt="img" className='brand-img' />
                                 </span>
                                 <div className="brand-info">
-                                    <span className='name'>Asus</span>
-                                    <span className='price'>Rs 45000</span>
+                                    <span className='name'>{prod.name}</span>
+                                    <span className='price'>Rs {prod.price}</span>
                                     <div className="buy">
                                         <span>
 
@@ -50,7 +52,20 @@ export default function Iphone() {
                                             }
 
                                         </span>
-                                        <span><i className="fa-solid fa-bag-shopping fa-xl " style={{ color: "#212121" }}></i></span>
+                                        {
+                                            cart.some((p)=>p.id===prod.id) ? (<button className='remove_btn' onClick={()=>{
+                                                dispatch({
+                                                    type:"Remove_from_cart",
+                                                    payload: prod,
+                                                })
+                                            }}>Remove</button>) : (<span><i className="fa-solid fa-bag-shopping fa-xl " onClick={()=>{
+                                                dispatch({
+                                                    type: "Add_to_cart",
+                                                    payload: prod,
+                                                  })
+                                            }}
+                                             style={{ color: "#212121" }}></i></span>)
+                                        }
                                     </div>
                                 </div>
                             </div>

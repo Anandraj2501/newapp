@@ -1,21 +1,22 @@
 import React from 'react';
 import './Css/navbar.css';
+
 import { useState } from 'react';
 import { useContext } from 'react';
-import Cart from './Cart';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Routes,
     Link
 } from "react-router-dom";
 import { CountContext } from '../CountContext';
+import Button from 'react-bootstrap/Button';
 
 export default function Navbar() {
-    const {count}= useContext(CountContext);
+    const { count } = useContext(CountContext);
     console.log(count);
     let [open, setOpen] = useState(false);
+    const {
+        state: { cart },
+        dispatch
+    } = useContext(CountContext);
     const handleopenclick = () => {
         if (open === false) {
             setOpen(true);
@@ -34,12 +35,18 @@ export default function Navbar() {
 
 
                     <div className="searchbox search-box ">
-                        <input className="form-control mr-sm-2 me-1 col-sm-8 rounded" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-primary font-weight-bold my-2 my-sm-0" type="submit">Search</button>
+                        
+                            <input className="form-control mr-sm-2 me-1 col-sm-8 rounded" type="search" placeholder="Search" aria-label="Search"  />
+                            <Link to="/Searchpage" onClick={(e) => {
+                                dispatch({
+                                    type: "search",
+                                    payload: e.target.value,
+                                })
+                            }}><Button variant="outline-primary">Search</Button></Link>
                     </div>
                     <div className='icons'>
-                        <Link className="p-1 me-3" to="/Cart"><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff" }}><sup>0</sup></i></Link>
-                        <span className="p-1"><i class="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{count}</sup></i>
+                        <Link className="p-1 me-3" to="/Cart"><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff" }}><sup>{cart.length}</sup></i></Link>
+                        <span className="p-1"><i className="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{count}</sup></i>
                         </span>
                         <span className='p-1 hamburger'>
                             <i className="fa-solid fa-bars fa-xl" onClick={handleopenclick} style={{ color: "#ffffff" }}></i></span>
@@ -47,7 +54,7 @@ export default function Navbar() {
                 </div>
 
             </nav>
-            
+
             <div className="catalogue  shadow-lg" >
                 <div className="catalogue_container d-flex  justify-content-between">
                     <div className="item p-2 mt-2 mb-2">
