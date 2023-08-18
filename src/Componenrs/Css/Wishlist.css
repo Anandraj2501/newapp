@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+
+.main{
+    margin-top: 4rem;
+    /* border: 1px solid red; */
+    padding: 0vw 5vw;
+    /* border: 2px solid green; */
+}
+.mainwrapper{
+    /* border: 2px solid yellow; */
+    margin-top: 2rem;
+    /* border: 2px solid red; */
+}
+
+.heading{
+    /* border: 1px solid green; */
+    font-weight: 500;
+    font-size: large;
+}
+
+.brand-names-container{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: medium;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+.brand-names{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.brand-names:hover{
+    color: rgb(237, 19, 19);
+    text-decoration: underline;
+}
+
+.brand-cards-container{
+    /* border: 2px solid red; */
+    padding: 0vw 2vw;
+    
+}
+.brand-cards-wrapper{
+    /* border: 2px solid orange; */
+    display: flex;
+    justify-content: space-between;
+}
+.card-container{
+    /* border: 3px solid blue; */
+    display: inline-block;
+    padding: 0.4rem;
+}
+
+
+.brand-container{
+    /* border: 4px solid green; */
+    display: block;
+    width: 100%;
+    
+}
+.brand-img{
+    /* border: 2px solid red; */
+    width: 10vw;
+}
+.brand-info{
+    /* border: 2px solid cyan; */
+    margin-top: 2vh;
+
+}
+.name{
+    display: block;
+    /* border: 2px solid red; */
+    margin-bottom: 1vh;
+    color: rgb(91, 89, 89);
+    font-weight: 500;
+}
+.price{
+    display: block;
+    /* border: 2px solid green; */
+    margin-top: 0vh;
+    color: rgb(37, 37, 37);
+    font-weight:bold;
+    
+}
+.buy{
+    margin-top: 1vh;
+    /* border: 2px solid blue; */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-heart{
+    cursor: pointer;
+}
+.fa-bag-shopping{
+    cursor: pointer;
+}
+.remove_btn{
+    border: 1px solid rgb(56 163 251);
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(56, 163, 251);
+}
+.remove_btn:hover{
+    /* background-color: rgb(56, 163, 251); */
+    color: black;
+}
+@media screen and (max-width:660px) {
+
+    .brand-img{
+        /* border: 2px solid red; */
+        width: 14vw
+    } 
+    .name {
+        display: block;
+        /* border: 2px solid red; */
+        margin-bottom: 1vh;
+        color: rgb(91, 89, 89);
+        font-weight: 500;
+        font-size: 3vw;
+    }
+    .price{
+        display: block;
+        /* border: 2px solid green; */
+        margin-top: 0vh;
+        color: rgb(37, 37, 37);
+        font-weight: bold;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    .brand-cards-wrapper {
+        /* border: 2px solid orange; */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .card-container {
+        /* border: 3px solid blue; */
+        display: inline-block;
+        padding: 0.4rem;
+        display: flex;
+    }
+    .brand-info {
+        width: 70%;
+        /* border: 2px solid cyan; */
+        margin-top: 0vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 2vw;
+    }
+    
+    
+    .brand-container {
+        /* border: 4px solid green; */
+        display: block;
+        width: 30%;
+    }
+    .brand-img {
+        /* border: 2px solid red; */
+        width: 100%;
+    }
+} 

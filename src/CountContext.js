@@ -127,8 +127,9 @@ export default function Countcontext({ children }) {
       qty: 1
     }]
   }
-  const allitems = {
-    items: [{
+  const allitems = 
+    [
+    {
       id: "samsung1",
       src: "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/x/x/s/-original-imagfhu6dcpdnqkh.jpeg?q=70",
       name: "Samsung1",
@@ -222,21 +223,21 @@ export default function Countcontext({ children }) {
       qty: 1
     },
     {
-      id: "redmi1",
+      id: "redmi2",
       src: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70",
       name: "Redmi2",
       price: 45000, rheartcolor: true,
       qty: 1
     },
     {
-      id: "redmi1",
+      id: "redmi3",
       src: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70",
       name: "Redmi3",
       price: 45000, rheartcolor: true,
       qty: 1
     },
     {
-      id: "redmi1",
+      id: "redmi4",
       src: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70",
       name: "Redmi4",
       price: 45000, rheartcolor: true,
@@ -244,14 +245,15 @@ export default function Countcontext({ children }) {
     },
   
   ]
-  }
+  
 
  
 
   const [state, dispatch] = useReducer(cartreducer, {
     appstate: appstate,
     cart: [],
-    searchcart: [],
+    wishlist:[],
+    searchquery:"",
     allitems: allitems,
   })
 

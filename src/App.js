@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Cart from './Componenrs/Cart';
 import Searchpage from './Componenrs/Searchpage';
+import Wishlist from './Componenrs/Wishlist';
 
 function App() {
   // const [heartcolor,setHeartcolor] = useState(()=> handleclick);
@@ -36,6 +37,7 @@ function App() {
             <Route path='*' exact element={<Main/>}></Route>
             <Route path='/Cart' exact element={<Cart />}></Route>
             <Route path='/Searchpage' exact element={<Searchpage />}></Route>
+            <Route path='/Wishlist' exact element={<Wishlist />}></Route>
           </Routes>
         </div>
 
