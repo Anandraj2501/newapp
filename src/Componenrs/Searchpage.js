@@ -4,15 +4,15 @@ import SingleProduct from './SingleProduct';
 export default function Searchpage() {
     const { count, setCount } = useContext(CountContext);
     const {
-        state: { appstate, searchquery, cart,allitems },
+        state: { appstate, searchquery, cart, allitems },
         dispatch,
     } = useContext(CountContext);
-    console.log(allitems);
+    console.log(appstate,"helloooooo");
     const transformProducts = () => {
         let sortedProducts;
 
         if (searchquery) {
-            sortedProducts = appstate.object2;
+            sortedProducts =  appstate;
             sortedProducts = sortedProducts.filter((prod) =>
                 prod.name.toLowerCase().includes(searchquery)
             );
@@ -21,18 +21,19 @@ export default function Searchpage() {
         return sortedProducts;
     };
     return (
+        <>{(searchquery) ?
+            (<div className='cart'>
+                <div className='cart-wrapper'>
 
-        <div className='cart'>
-            <div className='cart-wrapper'>
 
-               
-                    {transformProducts().map((prod,index) => (
+                    {transformProducts().map((prod, index) => (
                         <SingleProduct prod={prod} key={prod.id} index={index} />
                     ))}
-                
-            </div>
-        </div>
 
+                </div>
+            </div>):(<div>no match found</div>)
+            }
+        </>
 
     )
 }

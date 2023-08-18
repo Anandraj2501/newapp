@@ -8,26 +8,13 @@ export default function Iphone() {
     const {count,setCount} = useContext(CountContext);
 
     const {
-        state: { cart,appstate },
+        state: { cart,appstate ,wishlist},
         dispatch,
       } = useContext(CountContext);
 
-    let values = appstate.object4;
+    let values = appstate.filter((c)=>c.brand==="redmi");
     console.log(values);
-    function handleclick(index) {
-        console.log("chlra hai");
-        if (values[index].rheartcolor === true) {
-            values[index].rheartcolor = false;
-            console.log("chlra 1hai");
-            setCount(count + 1);
-        }
-        else {
-            values[index].rheartcolor = true;
-            console.log("chlra2 hai");
-            setCount(count - 1);
-
-        }
-    }
+    
 
     return (
         <div>
@@ -46,9 +33,19 @@ export default function Iphone() {
                                     <div className="buy">
                                         <span>
 
-                                            {
-                                                values[index].rheartcolor ? (<i key={index} className="fa-regular fa-heart fa-xl" onClick={() => { handleclick(index) }} style={{ color: "#f51414" }}></i>) :
-                                                    (<i key={index} className="fa-solid fa-heart fa-xl" onClick={() => { handleclick(index) }} style={{ color: "#f51414" }}></i>)
+                                        {
+                                                wishlist.some((p)=>p.id===prod.id) ? (<i key={index} className="fa-solid fa-heart fa-xl" onClick={()=>{
+                                                    dispatch({
+                                                        type:"Remove_from_wishlist",
+                                                        payload: prod,
+                                                    })
+                                                }} style={{ color: "#f51414" }}></i>) : (
+                                                <i key={index} className="fa-regular fa-heart fa-xl" onClick={()=>{
+                                                    dispatch({
+                                                        type:"Add_to_wishlist",
+                                                        payload: prod,
+                                                    })
+                                                }} style={{ color: "#f51414" }}></i>)
                                             }
 
                                         </span>

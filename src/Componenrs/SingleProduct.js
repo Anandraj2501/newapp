@@ -4,25 +4,10 @@ import { CountContext } from '../CountContext';
 export default function SingleProduct({prod,index}) {
     const{count,setCount} = useContext(CountContext);
     const {
-        state: { cart,appstate },
+        state: { cart,appstate,wishlist },
         dispatch,
       } = useContext(CountContext);
-    let values = appstate.object;
-    function handleclick(index) {
-        console.log("chlra hai");
-        if (values[index].sheartcolor === true) {
-            values[index].sheartcolor = false;
-            console.log("chlra 1hai");
-            console.log("onclick");
-            setCount(count + 1);
-        }
-        else {
-            values[index].sheartcolor = true;
-            console.log("chlra2 hai");
-            setCount(count - 1);
-
-        }
-    }
+    
     return (
         <>
              <div key={index} className="card-container">
@@ -35,9 +20,19 @@ export default function SingleProduct({prod,index}) {
                                     <div className="buy">
                                         <span>
 
-                                            {
-                                                prod.sheartcolor ? (<i key={index} className="fa-regular fa-heart fa-xl" onClick={() => { handleclick(index) }} style={{ color: "#f51414" }}></i>) :
-                                                    (<i key={index} className="fa-solid fa-heart fa-xl" onClick={() => { handleclick(index) }} style={{ color: "#f51414" }}></i>)
+                                        {
+                                                wishlist.some((p)=>p.id===prod.id) ? (<i key={index} className="fa-solid fa-heart fa-xl" onClick={()=>{
+                                                    dispatch({
+                                                        type:"Remove_from_wishlist",
+                                                        payload: prod,
+                                                    })
+                                                }} style={{ color: "#f51414" }}></i>) : (
+                                                <i key={index} className="fa-regular fa-heart fa-xl" onClick={()=>{
+                                                    dispatch({
+                                                        type:"Add_to_wishlist",
+                                                        payload: prod,
+                                                    })
+                                                }} style={{ color: "#f51414" }}></i>)
                                             }
 
                                         </span>

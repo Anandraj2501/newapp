@@ -44,15 +44,16 @@
     padding: 0vw 2vw;
     
 }
-.brand-cards-wrapper{
+.wishlist-cards-wrapper{
     /* border: 2px solid orange; */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
-.card-container{
+.wishlist-card-container{
     /* border: 3px solid blue; */
     display: inline-block;
     padding: 0.4rem;
+    margin-right: 2rem;
 }
 
 
@@ -134,13 +135,13 @@
 }
 
 @media screen and (max-width:600px){
-    .brand-cards-wrapper {
+    .wishlist-cards-wrapper {
         /* border: 2px solid orange; */
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
-    .card-container {
+    .wishlist-card-container {
         /* border: 3px solid blue; */
         display: inline-block;
         padding: 0.4rem;

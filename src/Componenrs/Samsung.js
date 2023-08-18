@@ -8,7 +8,7 @@ export default function Samsung() {
         state: { cart,appstate,wishlist },
         dispatch,
       } = useContext(CountContext);
-    let values = appstate.object;
+    let values = appstate.filter((c)=>c.brand==="samsung");
     // function handleclick(index) {
     //     console.log("chlra hai");
     //     if (values[index].sheartcolor === true) {

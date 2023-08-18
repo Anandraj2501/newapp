@@ -1,5 +1,5 @@
-import React,{useContext} from 'react'
-import "../Componenrs/Css/"
+import React,{useContext} from 'react';
+import "./Css/Wishlist.css";
 import { CountContext } from '../CountContext';
 export default function Wishlist() {
     const { count, setCount } = useContext(CountContext);
@@ -10,10 +10,10 @@ export default function Wishlist() {
     return (
         <div>
             <div className="brand-cards-container">
-                <div className="brand-cards-wrapper">
+                <div className="wishlist-cards-wrapper">
                     {
                         wishlist.map((prod, index) => (
-                            <div key={index} className="card-container">
+                            <div key={index} className="wishlist-card-container">
                                 <span className='brand-container'>
                                     <img src={prod.src} alt="img" className='brand-img' />
                                 </span>
