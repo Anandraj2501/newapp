@@ -1,7 +1,6 @@
 
 import './App.css';
 import Navbar from './Componenrs/Navbar';
-import Main from './Componenrs/Main';
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +10,7 @@ import {
 import Cart from './Componenrs/Cart';
 import Searchpage from './Componenrs/Searchpage';
 import Wishlist from './Componenrs/Wishlist';
+import Maincontainer from './Componenrs/Maincontainer';
 
 function App() {
   // const [heartcolor,setHeartcolor] = useState(()=> handleclick);
@@ -34,7 +34,7 @@ function App() {
         <Navbar/>
         <div className='main'>
           <Routes>
-            <Route path='*' exact element={<Main/>}></Route>
+            <Route path='*' exact element={<Maincontainer/>}></Route>
             <Route path='/Cart' exact element={<Cart />}></Route>
             <Route path='/Searchpage' exact element={<Searchpage />}></Route>
             <Route path='/Wishlist' exact element={<Wishlist />}></Route>

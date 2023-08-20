@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Css/main.css';
-import Iphone from './Iphone';
-import Asus from './Asus';
-import Redmi from './Redmi';
-import SAMSUNG from './Samsung';
+import Singleproductphones from './Singleproductphones';
+
+
 
 import {
-    Route,
-    Routes,
     Link,
     Outlet
 } from "react-router-dom";
 
 
 export default function Main() {
+    const [prod_name,setprod_name] = useState("samsung");
 
-
+    // const handleclick = (name)=>{
+    //     prod_name = name;
+    //     console.log(name);
+    // }
     return (
         <>
 
@@ -24,15 +25,16 @@ export default function Main() {
                 <div className="mainwrapper">
                     <div className="brand-names-container">
                     
-                        <Link className="brand-names" to="/">SAMSUNG</Link>
-                        <Link className="brand-names" to="/Iphone">IPhones</Link>
-                        <Link className="brand-names" to="/Asus">ASUS</Link>
-                        <Link className="brand-names" to="/Redmi">Redmi</Link>
+                        <Link className="brand-names" to="/" onClick={()=>setprod_name("samsung")}>SAMSUNG</Link>
+                        <Link className="brand-names" to="/" onClick={()=>setprod_name("iphone")}>IPhones</Link>
+                        <Link className="brand-names" to="/" onClick={()=>setprod_name("asus")}>ASUS</Link>
+                        <Link className="brand-names" to="/" onClick={()=>setprod_name("redmi")}>Redmi</Link>
 
                     </div>
                     <Outlet />
                     <hr />
-                        <Routes>
+                        <Singleproductphones prod={prod_name}/>
+                        {/* <Routes>
                             <Route path='/' exact element={<SAMSUNG />} />
                             <Route path='/Iphone' exact element={<Iphone />}>
                             </Route>
@@ -40,13 +42,14 @@ export default function Main() {
                             </Route>
                             <Route path='/Redmi' exact element={<Redmi />}>
                             </Route>
-                        </Routes>
+                        </Routes> */}
 
 
 
                 </div>
             </div>
-
+            
+            
         </>
     )
 }

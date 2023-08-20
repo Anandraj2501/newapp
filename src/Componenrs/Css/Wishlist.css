@@ -48,6 +48,7 @@
     /* border: 2px solid orange; */
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .wishlist-card-container{
     /* border: 3px solid blue; */
@@ -55,7 +56,9 @@
     padding: 0.4rem;
     margin-right: 2rem;
 }
-
+.wishlistimg-container{
+    height: 267px;
+}
 
 .brand-container{
     /* border: 4px solid green; */
@@ -94,6 +97,10 @@
     display: flex;
     justify-content: space-between;
 }
+.wishlist-info{
+    display: flex;
+    justify-content: space-between;
+}
 .fa-heart{
     cursor: pointer;
 }
@@ -110,15 +117,13 @@
     /* background-color: rgb(56, 163, 251); */
     color: black;
 }
-@media screen and (max-width:660px) {
+/* @media screen and (max-width:660px) {
 
     .brand-img{
-        /* border: 2px solid red; */
         width: 14vw
     } 
     .name {
         display: block;
-        /* border: 2px solid red; */
         margin-bottom: 1vh;
         color: rgb(91, 89, 89);
         font-weight: 500;
@@ -126,30 +131,25 @@
     }
     .price{
         display: block;
-        /* border: 2px solid green; */
         margin-top: 0vh;
         color: rgb(37, 37, 37);
         font-weight: bold;
         font-size: 3vw;
     }
-}
+} */
 
-@media screen and (max-width:600px){
+/* @media screen and (max-width:600px){
     .wishlist-cards-wrapper {
-        /* border: 2px solid orange; */
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
     .wishlist-card-container {
-        /* border: 3px solid blue; */
         display: inline-block;
         padding: 0.4rem;
         display: flex;
     }
     .brand-info {
-        width: 70%;
-        /* border: 2px solid cyan; */
         margin-top: 0vh;
         display: flex;
         flex-direction: column;
@@ -159,12 +159,10 @@
     
     
     .brand-container {
-        /* border: 4px solid green; */
         display: block;
         width: 30%;
     }
     .brand-img {
-        /* border: 2px solid red; */
         width: 100%;
-    }
-} 
+    } 
+}  */

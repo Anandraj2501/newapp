@@ -39,7 +39,7 @@ export default function Navbar() {
 
                     <div className="searchbox search-box ">
 
-                        <input className="form-control mr-sm-2 me-1 col-sm-8 rounded" type="search" placeholder="Search" aria-label="Search" onChange={(e) => {
+                        <input className="form-control mr-sm-2 me-1 col-sm-8 rounded" type="search" placeholder="Search on famazon" aria-label="Search" onChange={(e) => {
                             console.log(e.target.value);
                             dispatch({
                                 type: "search",
@@ -50,10 +50,9 @@ export default function Navbar() {
                     </div>
                     <div className='icons'>
                         <Link className="p-1 me-3" to="/Cart"><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#ffffff" }}><sup>{cart.length}</sup></i></Link>
-                        <Link to="/Wishlist"><span className="p-1"><i className="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{wishlist.length}</sup></i>
-                        </span></Link>
-                        <span className='p-1 hamburger'>
-                            <i className="fa-solid fa-bars fa-xl" onClick={handleopenclick} style={{ color: "#ffffff" }}></i></span>
+                        <Link to="/Wishlist" className="p-1 me-3"><i className="fa-solid fa-heart fa-xl" style={{ color: "#ffffff" }}><sup>{wishlist.length}</sup></i></Link>
+                        {/* <span className='p-1 hamburger'>
+                            <i className="fa-solid fa-bars fa-xl" onClick={handleopenclick} style={{ color: "#ffffff" }}></i></span> */}
                     </div>
                 </div>
 
@@ -152,12 +151,11 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={`sidebar ${open === true ? "sidebaractive" : ""}`}>
-                <a href="/">Mobiles</a>
-                <a href="/">Tablets</a>
-                <a href="/">Laptops</a>
-                <a href="/">Grocery</a>
-            </div>
+            {/* <div className={`sidebar ${open === true ? "sidebaractive" : ""}`}>
+                <Link to="/cart">Cart</Link>
+                <Link to="/cart">Wishlist</Link>
+                
+            </div> */}
 
         </div>
     )

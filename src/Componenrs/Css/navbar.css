@@ -99,16 +99,19 @@ sup{
         display: none; */
     
 }
+@media screen and (max-width:662px){
+    .navbar{
+        padding: 0vw 0vw;
+    }
+}
 @media screen and (max-width:632px){
     .navbar{
         padding: 0vw 0vw;
     }
 }
+
 @media screen and (max-width:582px){
-    .search-box{
-        display: none;
-        background-color: aqua;
-    }
+    
     .catalogue{
         padding-left:  0vw;
         padding-right: 0vw;
@@ -118,6 +121,9 @@ sup{
     .hamburger{
         display:inline;
         cursor: pointer;
+    }
+    .navbar-brand{
+        display:none;
     }
     .sidebar{
         display: block;
@@ -135,6 +141,12 @@ sup{
 @media screen and (max-width:982px){
     .item-name{
         font-size: 1vmax;
+    }
+}
+@media screen and (max-width:392px){
+    
+    .me-3{
+        margin-right: 0rem!important;
     }
 }
 /* @media screen and (max-width:482px){

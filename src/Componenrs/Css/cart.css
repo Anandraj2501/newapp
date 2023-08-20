@@ -30,7 +30,9 @@
     margin-bottom: 2vw;
     margin-left: 6vw;
 }
-
+.img_container{
+    height:287px
+}
 .image{
     /* border: 2px solid rgb(255, 0, 0); */
     display: block;
@@ -52,13 +54,13 @@
     margin-bottom: 2vh;
 }
 .add_btn{
-    /* background-color: rgb(0, 170, 255); */
+    background-color: rgb(0, 170, 255);
     padding: 0rem 1rem 0rem 1rem;
     border-radius: 0px;
     border-right: 2px solid rgb(86, 85, 85);
 }
 .sub_btn{
-    /* background-color: rgb(0, 170, 255); */
+    background-color: rgb(0, 170, 255);
     padding: 0rem 1rem 0rem 1rem;
     border-radius: 0px;
     border-left: 2px solid rgb(86, 85, 85);
@@ -81,4 +83,7 @@
 .form{
     width: 8vw;
     border-radius: 5px;
+}
+.dustbinicon{
+    margin-top: 3px;
 }

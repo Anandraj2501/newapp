@@ -29,15 +29,17 @@
     padding-left: 2vw;
     padding-right: 2vw;
 }
-.brand-names{
+.brand-names:link{
     cursor: pointer;
     text-decoration: none;
     color: black;
 }
+
 .brand-names:hover{
     color: rgb(237, 19, 19);
     text-decoration: underline;
 }
+
 
 .brand-cards-container{
     /* border: 2px solid red; */
