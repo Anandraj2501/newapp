@@ -27,7 +27,7 @@ export const cartreducer = (state, action) => {
             };
         case "search":
             return {
-                ...state,  searchquery: action.payload
+                ...state,  searchquery: action.payload.toLowerCase()
             
             };
         default:
