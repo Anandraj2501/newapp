@@ -2,10 +2,9 @@ import React, { useContext } from 'react';
 import { CountContext } from '../CountContext';
 import SingleProduct from './SingleProduct';
 export default function Searchpage() {
-    const { count, setCount } = useContext(CountContext);
     const {
-        state: { appstate, searchquery, cart, allitems },
-        dispatch,
+        state: { appstate, searchquery },
+        
     } = useContext(CountContext);
     console.log(appstate,"helloooooo");
     const transformProducts = () => {

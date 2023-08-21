@@ -2,8 +2,6 @@ import { createContext, useState, React, useReducer } from 'react';
 import { cartreducer } from './Componenrs/reducer';
 
 export const CountContext = createContext();
-// export const ColorContext = createContext("");
-// export const Cart = createContext();
 
 
 export default function Countcontext({ children }) {

@@ -1,32 +1,20 @@
 import React from 'react';
 import './Css/navbar.css';
-
-import { useState } from 'react';
 import { useContext } from 'react';
 import {
     Link
 } from "react-router-dom";
 import { CountContext } from '../CountContext';
 import Button from 'react-bootstrap/Button';
-import Wishlist from './Wishlist';
 
 export default function Navbar() {
     const { count } = useContext(CountContext);
     console.log(count);
-    let [open, setOpen] = useState(false);
     const {
         state: { cart,wishlist},
         dispatch
     } = useContext(CountContext);
-    const handleopenclick = () => {
-        if (open === false) {
-            setOpen(true);
-        }
-        else {
-            setOpen(false);
-        }
-        console.log("open");
-    }
+    
 
 
 

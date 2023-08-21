@@ -2,9 +2,8 @@ import React, { useContext } from 'react';
 import { CountContext } from '../CountContext';
 
 export default function SingleProduct({prod,index}) {
-    const{count,setCount} = useContext(CountContext);
     const {
-        state: { cart,appstate,wishlist },
+        state: { cart,wishlist },
         dispatch,
       } = useContext(CountContext);
     

@@ -4,7 +4,6 @@ import './Css/main.css';
 import { CountContext } from '../CountContext';
 export default function Singleproductphones({prod}) {
     console.log(prod);
-    const { count, setCount } = useContext(CountContext);
     const {
         state: { cart,appstate,wishlist },
         dispatch,

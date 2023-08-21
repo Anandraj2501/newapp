@@ -3,7 +3,6 @@ import './Css/main.css';
 
 import { CountContext } from '../CountContext';
 export default function Singleproductlaptop({prod}) {
-    const { count, setCount } = useContext(CountContext);
     const {
         state: { cart,appstate,wishlist },
         dispatch,
