@@ -8,21 +8,6 @@ export default function Singleproductlaptop({prod}) {
         dispatch,
       } = useContext(CountContext);
     let values = appstate.filter((c)=>c.brand===`${prod}`);
-    // function handleclick(index) {
-    //     console.log("chlra hai");
-    //     if (values[index].sheartcolor === true) {
-    //         values[index].sheartcolor = false;
-    //         console.log("chlra 1hai");
-    //         console.log("onclick");
-    //         setCount(count + 1);
-    //     }
-    //     else {
-    //         values[index].sheartcolor = true;
-    //         console.log("chlra2 hai");
-    //         setCount(count - 1);
-
-    //     }
-    // }
 
     return (
         <div>

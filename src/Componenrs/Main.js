@@ -34,15 +34,6 @@ export default function Main() {
                     <Outlet />
                     <hr />
                         <Singleproductphones prod={prod_name}/>
-                        {/* <Routes>
-                            <Route path='/' exact element={<SAMSUNG />} />
-                            <Route path='/Iphone' exact element={<Iphone />}>
-                            </Route>
-                            <Route path='/Asus' exact element={<Asus />}>
-                            </Route>
-                            <Route path='/Redmi' exact element={<Redmi />}>
-                            </Route>
-                        </Routes> */}
 
 
 
